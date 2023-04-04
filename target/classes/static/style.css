@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#home{
+    margin-left: 10px;
+    border: 2px solid slategray;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#create{
+    border: 2px solid slategray;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#home:hover {
+  background-color: slategray;
+  color: white;
+  border-color: white;
+}
+
+#create:hover {
+  background-color: slategray;
+  color: white;
+  border-color: white;
+}
+
+.cross {
+  color: red;
+}
+
+.check {
+  color: green;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+form{
+    margin-top: 5px;
+}

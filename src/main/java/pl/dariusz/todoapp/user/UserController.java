@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/user")
+@RequestMapping(path = "/user")
 @CrossOrigin
 public class UserController {
 
@@ -31,6 +31,8 @@ public class UserController {
     public void deleteStudent(@PathVariable("userId") Long userId){
         userService.deleteUser(userId);
     }
+
+
 
 
 }
