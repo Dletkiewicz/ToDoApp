@@ -1,9 +1,12 @@
 package pl.dariusz.todoapp.todo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -29,12 +32,20 @@ public class ToDoController {
         return new ModelAndView("create");
     }
 
-//
-//    @PostMapping("/newtask")
-//    public String addTask(@RequestParam ToDoTask toDoTask) {
-//        toDoService.addNewTask(toDoTask);
-//        return "redirect:/tasks";
-//    }
+    @GetMapping("/modify/{id}")
+    public ModelAndView modifyTask(@PathVariable Long id) {
+        ModelAndView modelAndView = new ModelAndView("modify");
+        ToDoTask task = toDoService.getTaskById(id);
+        modelAndView.addObject("task", task);
+        return modelAndView;
+    }
+
+    @PostMapping("/modify/{id}")
+    public ModelAndView updateTask(@PathVariable Long id, @ModelAttribute("task") ToDoTask task) {
+        task.setId(id);
+        toDoService.addNewTask(task);
+        return new ModelAndView("redirect:/api/index");
+    }
 
     @PostMapping("/newtask")
     public RedirectView addTask(@RequestParam String title, @RequestParam(required=false, defaultValue="false") boolean done) {
@@ -49,11 +60,17 @@ public class ToDoController {
     public RedirectView deleteTask(@PathVariable("taskId") Long taskId){
         toDoService.deleteTask(taskId);
         return new RedirectView("/api/index");
+
     }
 
-    @PutMapping("/{taskId}")
-    public void updateTask(@PathVariable Long taskId, @RequestBody ToDoTask toDoTask) {
-        toDoService.updateTask(taskId, toDoTask.getTitle(), toDoTask.isDone());
+    @PostMapping("/update/{taskId}")
+    public RedirectView updateTask(@PathVariable("taskId") Long taskId, @RequestParam String title, @RequestParam(required = false) boolean done) {
+        ToDoTask task = toDoService.getTasks().get(Math.toIntExact(taskId));
+        task.setTitle(title);
+        task.setDone(done);
+        toDoService.addNewTask(task);
+        return new RedirectView("/api/index");
     }
+
 
 }

@@ -40,8 +40,19 @@ public class ToDoService{
         toDoRepository.deleteById(taskId);
     }
 
+    public ToDoTask getTaskById(Long id) {
+        return toDoRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid task Id:" + id));
+    }
+
     public void updateTask(Long id, String title, boolean done) {
-        toDoRepository.updateTask(id, title, done);
+        ToDoTask taskToUpdate = toDoRepository.findById(id)
+                .orElseThrow(() -> new IllegalStateException("Task with id " + id + " does not exist"));
+
+        taskToUpdate.setTitle(title);
+        taskToUpdate.setDone(done);
+
+        toDoRepository.save(taskToUpdate);
     }
 
 }
