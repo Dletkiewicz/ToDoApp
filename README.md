@@ -2,7 +2,7 @@
 # To Do list application
 
 An application designed for making to-do tasks.
-Technology used: 
+Technology used:
 Java, Spring boot, Spring Data JPA, MySQL Database, Thymeleaf for making HTML templates.
 
 
@@ -13,7 +13,14 @@ Java, Spring boot, Spring Data JPA, MySQL Database, Thymeleaf for making HTML te
 
 
 ## Screenshots
+Main site:
 
-![App Screenshot](https://imgur.com/a/pB6fiHu)
-![App Screenshot](https://imgur.com/a/PjY1H81)
-![App Screenshot](https://imgur.com/a/pToCj17)
+![alt text](https://i.imgur.com/dL3svzM.png)
+
+Adding new task:
+
+![alt text](https://i.imgur.com/ZuT86hm.png)
+
+Modyfing some task:
+
+![alt text](https://i.imgur.com/SLTY8qU.png)
