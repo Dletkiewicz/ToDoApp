@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef66d5d8-0565-42b6-b77d-01db73d8b311" name="Changes" comment="Add ability to modify tasks">
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/dariusz/todoapp/todo/ToDoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/dariusz/todoapp/todo/ToDoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/dariusz/todoapp/todo/ToDoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/dariusz/todoapp/todo/ToDoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/create.html" afterDir="false" />
-    </list>
+    <list default="true" id="ef66d5d8-0565-42b6-b77d-01db73d8b311" name="Changes" comment="Add ability to modify tasks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680734440390</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add ability to modify tasks">
+      <created>1680734489384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680734489384</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
